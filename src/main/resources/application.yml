@@ -1,0 +1,14 @@
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+  jpa:
+    open-in-view: false
+
+
+logging:
+  level:
+    root: INFO
+    com.oseias: DEBUG
+    org.springframework: WARN
+    org.hibernate: WARN
