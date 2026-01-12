@@ -1,5 +1,6 @@
 package com.oseias.produtosapi;
 
+import com.oseias.produtosapi.model.Produto;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProdutosApiApplication {
 
     @GetMapping("/inicial")
-    public String saudar(){
-        return "Hello World";
+    public String mostrar(){
+        return "11/01/2025 - CHECK!";
     }
 
 	public static void main(String[] args) {

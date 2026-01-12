@@ -2,8 +2,20 @@ spring:
   output:
     ansi:
       enabled: ALWAYS
+
+  datasource:
+    url: jdbc:h2:mem:produtos
+    username: sa
+    password: pass
+
   jpa:
     open-in-view: false
+    database-plataform: org.hibernate.dialect.H2Dialect
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
 
 
 logging:
@@ -12,3 +24,5 @@ logging:
     com.oseias: DEBUG
     org.springframework: WARN
     org.hibernate: WARN
+
+
