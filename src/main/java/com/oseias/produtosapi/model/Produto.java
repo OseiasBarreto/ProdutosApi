@@ -1,9 +1,25 @@
 package com.oseias.produtosapi.model;
 
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Table //define a classe como uma tabela do banco
+@Entity // diz que são entidades
 public class Produto {
+    @Id // essa coluna é um id / primary key
+    @Column(name = "id") // o nome da coluna do banco também se chama id, mas caso não se chamasse, aqui se iria nomear
     private String id;
+
+    @Column(name = "nome")
     private String nome;
+
+    @Column(name = "descricao")
     private String descricao;
+
+    @Column(name = "valor")
     private double valor;
 
 
