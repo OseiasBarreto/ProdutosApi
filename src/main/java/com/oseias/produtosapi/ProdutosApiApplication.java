@@ -10,7 +10,7 @@ public class ProdutosApiApplication {
 
     @GetMapping("/inicial")
     public String mostrar(){
-        return "23/01/2025 - CHECK!";
+        return "25/01/2025 - CHECK!";
     }
 
 	public static void main(String[] args) {

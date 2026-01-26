@@ -2,10 +2,7 @@ package com.oseias.produtosapi.controller;
 
 import com.oseias.produtosapi.model.Produto;
 import com.oseias.produtosapi.repository.ProdutoRepository;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
@@ -31,7 +28,13 @@ public class ProdutoController {
 
             produtoRepository.save(produto);
             return produto;
+        }
 
+
+        //metodo publico que vai retornar um produto que recebe como parametro o id
+        @GetMapping("{id}")
+        public Produto buscarPorId (@PathVariable("id") String id){
+            return produtoRepository.findById(id).orElse(null);
 
         }
 }
