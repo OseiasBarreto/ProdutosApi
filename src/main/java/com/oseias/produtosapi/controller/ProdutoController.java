@@ -37,4 +37,11 @@ public class ProdutoController {
             return produtoRepository.findById(id).orElse(null);
 
         }
+
+        //metodo publico void que usa o id como parametro para deletar
+        //a anotação define como id, o metodo especifica o caminho e o repository recebe o parametro.
+        @DeleteMapping("{id}")
+        public void deletePorId (@PathVariable("id")String id ){
+            produtoRepository.deleteById(id);
+        }
 }
